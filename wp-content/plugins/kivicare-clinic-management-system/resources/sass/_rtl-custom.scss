@@ -1,0 +1,816 @@
+// side-bar
+[dir=rtl] {
+  body {
+    text-align: right;
+  }
+
+  .sidenav {
+    right: 0;
+    border: 0 0 0 1;
+  }
+
+  //    chart
+  .apexcharts-xaxis {
+    direction: ltr;
+  }
+
+
+  //   content
+
+  .text-uppercase {
+    &.kc-patient {
+      .col-md-4 {
+        &.text-right {
+
+
+          text-align: left !important;
+
+        }
+      }
+    }
+  }
+
+  // Table
+  .vgt-pull-right {
+    float: left !important;
+  }
+
+  .vgt-pull-left {
+    float: right !important;
+  }
+
+
+
+  .rtl-left.cursorsHover {
+    float: left !important;
+
+  }
+
+
+
+  // custom-rtl-btn
+
+  .btn {
+    border-radius: $border-radius;
+  }
+
+  // .btn:not(:last-child)
+  // {
+
+  //   margin-left: .5rem;
+  // }
+
+  .btn-group {
+
+    // Prevent double borders when buttons are next to each other
+    >.btn:not(:first-child),
+    >.btn-group:not(:first-child) {
+      margin-left: -$btn-border-width;
+    }
+
+    // Reset rounded corners
+    >.btn:not(:last-child):not(.dropdown-toggle),
+    >.btn-group:not(:last-child)>.btn {
+      @include border-left-radius(0);
+    }
+
+    >.btn:not(:first-child),
+    >.btn-group:not(:first-child)>.btn {
+      @include border-right-radius(0);
+    }
+
+    >.btn:not(:last-child):not(.dropdown-toggle),
+    >.btn-group:not(:last-child)>.btn {
+      @include border-right-radius($border-radius);
+    }
+
+    >.btn:not(:first-child),
+    >.btn-group:not(:first-child)>.btn {
+      @include border-left-radius($border-radius);
+    }
+
+  }
+
+  //  margin-padding  rtl-mode
+
+
+
+
+  // stylelint-disable declaration-no-important
+
+  // Margin and Padding
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $prop,
+      $abbrev in (margin: m, padding: p) {
+
+        @each $size,
+        $length in $spacers {
+          .rtl-#{$abbrev}#{$infix}-#{$size} {
+            #{$prop}: $length !important;
+          }
+
+          .rtl-#{$abbrev}t#{$infix}-#{$size},
+          .rtl-#{$abbrev}y#{$infix}-#{$size} {
+            #{$prop}-top: $length !important;
+          }
+
+          .rtl-#{$abbrev}r#{$infix}-#{$size},
+          .rtl-#{$abbrev}x#{$infix}-#{$size} {
+            #{$prop}-right: $length !important;
+          }
+
+          .rtl-#{$abbrev}b#{$infix}-#{$size},
+          .rtl-#{$abbrev}y#{$infix}-#{$size} {
+            #{$prop}-bottom: $length !important;
+          }
+
+          .rtl-#{$abbrev}l#{$infix}-#{$size},
+          .rtl-#{$abbrev}x#{$infix}-#{$size} {
+            #{$prop}-left: $length !important;
+          }
+        }
+      }
+
+      // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+      @each $size,
+      $length in $spacers {
+        @if $size !=0 {
+          .rtl-m#{$infix}-n#{$size} {
+            margin: -$length !important;
+          }
+
+          .rtl-mt#{$infix}-n#{$size},
+          .rtl-my#{$infix}-n#{$size} {
+            margin-top: -$length !important;
+          }
+
+          .rtl-mr#{$infix}-n#{$size},
+          .rtl-mx#{$infix}-n#{$size} {
+            margin-right: -$length !important;
+          }
+
+          .rtl-mb#{$infix}-n#{$size},
+          .rtl-my#{$infix}-n#{$size} {
+            margin-bottom: -$length !important;
+          }
+
+          .rtl-ml#{$infix}-n#{$size},
+          .rtl-mx#{$infix}-n#{$size} {
+            margin-left: -$length !important;
+          }
+        }
+      }
+
+      // Some special margin utils
+      .rtl-m#{$infix}-auto {
+        margin: auto !important;
+      }
+
+      .rtl-mt#{$infix}-auto,
+      .rtl-my#{$infix}-auto {
+        margin-top: auto !important;
+      }
+
+      .rtl-mr#{$infix}-auto,
+      .rtl-mx#{$infix}-auto {
+        margin-right: auto !important;
+      }
+
+      .rtl-mb#{$infix}-auto,
+      .rtl-my#{$infix}-auto {
+        margin-bottom: auto !important;
+      }
+
+      .rtl-ml#{$infix}-auto,
+      .rtl-mx#{$infix}-auto {
+        margin-left: auto !important;
+      }
+    }
+  }
+
+
+
+
+
+  .card-profile-image img {
+    right: 50%;
+    left: auto;
+  }
+
+  .input-group>.input-group-prepend>.btn,
+  .input-group>.input-group-prepend>.input-group-text,
+  .input-group>.input-group-append:not(:first-child)>.btn,
+  .input-group>.input-group-append:not(:last-child)>.btn,
+  .input-group>.input-group-append:not(:first-child)>.input-group-text,
+  .input-group>.input-group-append:first-child>.btn:not(:first-child):not(.dropdown-toggle),
+  .input-group>.input-group-append:first-child>.input-group-text:not(:first-child) {
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+
+  .btn-group>.btn:not(:first-child):not(.dropdown-toggle),
+  .btn-group>.btn-group:not(:first-child)>.btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-group>.form-control:not(:first-child),
+  .input-group>.custom-select:not(:first-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-group>.form-control:not(:first-child),
+  .input-group>.custom-select:not(:first-child) {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .common-setting form .btn:not(:last-child) {
+    margin-left: 0.5rem;
+  }
+
+  .custom-control {
+    padding-right: 1.75rem;
+    padding-left: 0;
+  }
+
+  .custom-control-input,
+  .vgt-table th.sortable button,
+  .vgt-global-search__input .input__icon {
+    right: 0;
+    left: auto;
+  }
+
+  .custom-switch .custom-control-label::before {
+    right: -3.5rem;
+    left: auto;
+  }
+
+  .custom-switch .custom-control-label::after,
+  .custom-switch.b-custom-control-lg .custom-control-label::after,
+  .input-group-lg .custom-switch .custom-control-label::after {
+    right: calc(-2.8125rem + 2px);
+    left: auto;
+  }
+
+  .custom-switch.b-custom-control-lg .custom-control-input:checked~.custom-control-label::after,
+  .input-group-lg .custom-switch .custom-control-input:checked~.custom-control-label::after {
+    transform: translateX(-0.9375rem)
+  }
+
+  .navbar-nav {
+    padding-right: 0;
+  }
+
+  .toplevel_page_dashboard .sidenav-header {
+    flex-direction: row-reverse;
+  }
+
+  .vgt-global-search__actions {
+    margin-right: 10px;
+  }
+
+  .vgt-table th.sortable button:before,
+  .vgt-table th.sortable button:after,
+  .vgt-wrap__footer .footer__row-count::after {
+    left: 6px;
+    right: auto;
+  }
+
+  .vgt-table .vgt-left-align {
+    text-align: right;
+  }
+
+  .vgt-wrap__footer .footer__navigation__page-btn.disabled .chevron.left:after,
+  .vgt-wrap__footer .footer__navigation__page-btn.disabled .chevron.right:after {
+    transform: rotate(180deg);
+  }
+
+  .vgt-wrap__footer .footer__navigation>button:first-of-type {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+  .vgt-wrap__footer .footer__row-count__select {
+    margin-left: 0;
+    margin-right: 8px;
+    padding-right: 5px;
+    padding-left: 15px;
+  }
+
+  .appointment_select_clear_btn {
+    left: 40px;
+    right: auto;
+  }
+
+  .select_clear_btn {
+    left: 25px;
+    right: auto;
+  }
+
+  .datepicker_clear_btn {
+    left: 15px;
+    right: auto;
+  }
+
+  .vgt-global-search__input {
+    padding-left: 0;
+    padding-right: 40px;
+  }
+
+  .vgt-global-search__input .input__icon .magnifying-glass {
+    margin-right: 0.75em;
+    margin-left: 0;
+  }
+
+  .vgt-wrap__footer .footer__navigation__page-info {
+    margin: 0;
+  }
+
+  .vgt-wrap__footer .footer__navigation label {
+    margin-bottom: 0;
+  }
+
+  .vgt-global-search__actions .row {
+    flex-wrap: inherit;
+  }
+
+  .jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons,
+  .jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons {
+    float: left;
+  }
+
+  .snackbar-pos.top-right,
+  .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg,
+  .media-modal-close {
+    left: 0;
+    right: auto;
+  }
+
+  .snackbar-container .action {
+    margin: 0 24px 0 0;
+  }
+
+  .accordion .text-left {
+    text-align: right !important;
+  }
+
+  .accordion .card-header:after {
+    left: 1.5rem;
+    right: auto;
+  }
+
+  .custom-control-label::before,
+  .custom-control-label::after {
+    right: -1.75rem;
+    left: auto;
+  }
+
+  .ql-container .ql-editor {
+    text-align: right;
+  }
+
+  .btn:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+
+  .btn:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  .btn:not(:last-child) {
+    margin-left: 0.5em !important;
+    margin-right: 0;
+  }
+
+  .fc-button-group>.fc-button:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+
+  .btn-group .btn,
+  .input-group .btn {
+    margin-left: 0 !important;
+  }
+
+  .btn-group>.btn:not(:first-child),
+  .btn-group>.btn-group:not(:first-child) {
+    margin-right: -1px;
+  }
+
+  .kc-appointment-list .btn:not(:first-child) {
+    margin-right: 0.5rem;
+  }
+
+  .custom-select {
+    padding: .625rem .75rem .625rem 1.75rem;
+  }
+
+  [type=date] {
+    text-align: right;
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 4% 50% no-repeat !important;
+  }
+
+  [dir=rtl] .vgt-wrap [type=date] {
+    background-image: none !important;
+  }
+
+  // import file upload media image start
+
+  .kivi-star[data-star]:after {
+    right: 0;
+    left: auto;
+  }
+
+  .attachment-details .settings-save-status {
+    float: left;
+  }
+
+  .attachment-info .thumbnail {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+
+  .attachment-info .details {
+    float: right;
+  }
+
+  .attachments-browser .uploader-inline,
+  .attachments-browser.has-load-more .attachments-wrapper,
+  .attachments-browser:not(.has-load-more) .attachments {
+    right: 0;
+    left: 300px;
+  }
+
+  .compat-item .label {
+    margin-left: 4%;
+    float: right;
+  }
+
+  // import file upload media image end
+
+  .btn:not(:first-child).mr-0 {
+    margin-left: 0px !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .modal-header .close {
+    margin: -1rem auto -1rem -1rem;
+  }
+
+  .media-router .media-menu-item,
+  .media-toolbar-secondary,
+  .wp-core-ui .attachment {
+    float: right;
+  }
+
+  .media-toolbar-primary {
+    float: left;
+  }
+
+  .media-sidebar,
+  .vue__time-picker .controls {
+    left: 0;
+    right: auto;
+  }
+
+  .attachments-browser.has-load-more .attachments-wrapper,
+  .attachments-browser .media-toolbar {
+    right: 0;
+    left: 300px;
+  }
+
+  .media-attachments-filter-heading {
+    right: 16px;
+  }
+
+  .media-frame .media-search-input-label> {
+    right: 0;
+  }
+
+  #hero-navbar .dropdown-menu.dropdown-menu-right.show {
+    right: auto !important;
+    left: 0px !important;
+  }
+
+  .dropdown-menu .dropdown-item {
+    text-align: right;
+  }
+
+  .dropdown-menu .dropdown-item>i,
+  .dropdown-menu .dropdown-item>svg {
+    margin-left: 1rem;
+  }
+
+  .dropdown-menu .dropdown-item>i.fa-sign-out-alt {
+    transform: rotate(-180deg);
+  }
+
+  #customFieldPrint .btn:not(:first-child),
+  tr td .btn:not(:first-child) {
+    margin-right: 0;
+  }
+
+  .nav-pills .nav-item:not(:last-child) {
+    padding-left: 1rem;
+    padding-right: 0;
+  }
+
+  .custom-select {
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23525f7f' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left 0.75rem center/8px 10px;
+  }
+
+  #billingTable .vgt-table .vgt-left-align div {
+    direction: ltr;
+  }
+
+  #billingTable .vgt-table .vgt-left-align div.btn-group {
+    direction: rtl;
+  }
+
+  .vgt-table th {
+    padding: 0.75em 0.75em 0.75em 1.5em;
+  }
+
+  .vgt-table td img {
+    margin-left: 1rem;
+  }
+
+  #serviceForm .input-group-prepend .input-group-text,
+  #patientBillDataForm .input-group-prepend .input-group-text {
+    border-right: 1px solid #dee2e6;
+    border-left: 0;
+  }
+
+  #serviceForm .input-group-append .input-group-text {
+    border-left: 1px solid #dee2e6;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .kivicare-avatar-upload .kivicare-avatar-edit {
+    left: 22px;
+    right: auto;
+  }
+
+  .kivicare-avatar-upload .kivicare-avatar-edit input+label .fa-pencil-alt:before {
+    transform: rotate(270deg);
+  }
+
+  .btn-primary i.fa-angle-double-left {
+    transform: rotate(180deg);
+  }
+
+  .custom-switch.b-custom-control-lg .custom-control-label::before {
+    right: -2.8125rem;
+    left: auto;
+  }
+
+  .custom-switch.b-custom-control-lg {
+    padding-right: 2.8125rem;
+  }
+
+  .field-icon {
+    float: left;
+    margin-right: -25px;
+    margin-left: 0;
+    padding-left: 25px;
+  }
+
+  .alert-dismissible .close {
+    right: auto;
+    left: 1.5rem;
+  }
+
+  .alert-dismissible {
+    padding-right: 1.5rem;
+    padding-left: 4.35rem;
+  }
+
+  .fc-license-message {
+    left: 1px;
+    right: auto !important;
+  }
+
+  .fc-toolbar .fc-button-group .fc-icon {
+    transform: rotate(180deg);
+  }
+
+  #appointment-module .card-header .btn:not(:last-child) {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+
+  .apexcharts-legend-marker {
+    margin-left: 3px;
+    margin-right: 0;
+  }
+
+  #app_status.custom-select {
+    margin-right: 3%;
+    margin-left: 0 !important;
+  }
+
+  .modal-body p.d-flex {
+    gap: 5px;
+  }
+
+  #encounterPage .col-2 .btn:not(:first-child),
+  .row.kc-appointment-card .btn:not(:first-child) {
+    margin-right: 0;
+  }
+
+  .list-group {
+    padding-right: 0;
+  }
+
+  .vgt-wrap__footer .footer__navigation__page-btn .chevron.right {
+    transform: rotate(180deg);
+  }
+
+  .multiselect__option--highlight:after,
+  .multiselect__option--selected.multiselect__option--highlight:after,
+  .multiselect__option--selected:after {
+    content: none;
+  }
+
+  // Kivi Patient Dashboard Widget Start
+  .kivi-patient-dashboard-widget .nav {
+    padding-right: 0;
+  }
+
+  .kivi-patient-dashboard-widget .nav-pills .nav-item:not(:last-child) {
+    padding-left: 0;
+  }
+
+  .kivi-patient-dashboard-widget .form-group,
+  #kiviCarePatientLogin:last-child .kivi-row {
+    text-align: right;
+  }
+
+  // Kivi Patient Dashboard Widget end
+
+
+
+  @media only screen and (max-width: 640px),
+  screen and (max-height: 400px) {
+
+    .attachments-browser .attachments,
+    .attachments-browser .media-toolbar,
+    .attachments-browser .uploader-inline,
+    .media-frame-content .attachments-browser .attachments-wrapper {
+      left: 0;
+      right: auto;
+    }
+  }
+
+
+  .media-frame.hide-menu .media-frame-content,
+  .media-frame.hide-menu .media-frame-router,
+  .media-frame.hide-menu .media-frame-title,
+  .media-frame.hide-menu .media-frame-toolbar {
+    right: 0;
+    left: 0;
+  }
+
+  @media only screen and (max-width: 900px) {
+
+    .attachments-browser .attachments,
+    .attachments-browser .attachments-wrapper,
+    .attachments-browser .media-toolbar,
+    .attachments-browser .uploader-inline,
+    .attachments-browser.has-load-more .attachments-wrapper {
+      left: 262px;
+      right: 0;
+    }
+  }
+
+  @media only screen and (max-width: 640px),
+  screen and (max-height: 400px) {
+
+    .attachments-browser .attachments,
+    .attachments-browser .media-toolbar,
+    .attachments-browser .uploader-inline,
+    .media-frame-content .attachments-browser .attachments-wrapper {
+      right: 0;
+      left: 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .vgt-compact td:before {
+      float: right;
+      right: 0;
+      left: auto;
+      text-align: right;
+    }
+
+    .vgt-table .vgt-left-align {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .jconfirm-row .container {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .row.align-items-center .copyright.text-center.text-lg-left {
+      text-align: center !important;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  // bootstrup rtl
+
+  .ml-4 {
+    margin-right: 1.5rem !important;
+    margin-left: 0 !important;
+  }
+
+  .ml-1 {
+    margin-right: 0.25rem !important;
+    margin-left: 0 !important;
+  }
+
+  .mr-1 {
+    margin-left: 0.25rem !important;
+    margin-right: 0 !important;
+  }
+
+  .ml-2 {
+    margin-right: 0.5rem !important;
+    margin-left: 0 !important;
+  }
+
+  .mr-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+  }
+
+  .text-lg-left {
+    text-align: right !important;
+  }
+
+  .ml-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+  }
+
+  .ml-3 {
+    margin-right: 1rem !important;
+    margin-left: 0 !important;
+  }
+
+  .mr-3 {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+  }
+
+  .float-right {
+    float: left !important;
+  }
+
+  .float-left {
+    float: right !important;
+  }
+
+  .text-right {
+    text-align: left !important;
+  }
+
+  .text-left {
+    text-align: right !important;
+  }
+
+  .pr-4 {
+    padding-left: 1.5rem !important;
+    padding-right: 0 !important;
+  }
+
+  .pl-1 {
+    padding-left: 0 !important;
+    padding-right: .25em !important;
+  }
+
+}

@@ -1,0 +1,22 @@
+
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-vue/dist/bootstrap-vue.min.css';
+@import '~node-snackbar/dist/snackbar.min.css';
+
+
+@import '~vue-multiselect/dist/vue-multiselect.min.css';
+// @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "~animate.css/animate.min.css";
+//@import '~owl.carousel';
+//@import '~owl.carousel/dist/assets/owl.carousel.css';
+//@import '~owl.carousel/dist/assets/owl.theme.default.css';
+// @import '~vue-horizontal-scroll/dist/vue-horizontal-scroll.css';
+
+@import "helper";
+@import 'custom';
+@import "frontEnd-scss/book-appointment-widget";
+@import "frontEnd-scss/patient-dashboard-widget";
+@import "frontEnd-scss/custom-grid";
+
+
+@import "./profile_image.scss";

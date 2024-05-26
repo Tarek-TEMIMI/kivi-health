@@ -1,0 +1,20 @@
+@each $color, $value in $theme-colors {
+  
+}
+.btn-primary {
+background-color: var(--primary) !important;
+border-color:var(--primary) !important;
+}
+.text-primary {
+    color: var(--primary) !important;
+}
+.nav-link.router-link-exact-active.router-link-active {
+    background-color: var(--primary) !important;
+}
+
+.multiselect__tag {
+    background:var(--primary) !important;
+}
+.badge-outline-primary{
+    border: 1px solid var(--primary) !important
+}

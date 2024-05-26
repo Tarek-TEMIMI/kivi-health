@@ -1,0 +1,463 @@
+  .kivi-widget {
+      *::-moz-selection { background: var(--kivi-aptmnt-primary-color); color: var(--kivi-aptmnt-white-color); text-shadow: none; }
+      ::-moz-selection { background: var(--kivi-aptmnt-primary-color); color: var(--kivi-aptmnt-white-color); text-shadow: none; }
+      ::selection { background: var(--kivi-aptmnt-primary-color); color: var(--kivi-aptmnt-white-color); text-shadow: none; }
+      body { font-family: 'Roboto', sans-serif!important; font-weight: normal; font-style: normal; font-size: 16px !important; line-height: 28px; color: var(--kivi-aptmnt-body-text) !important; overflow-x: hidden !important; }
+      a { transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; color: var(--kivi-aptmnt-title-color); }
+      .button { transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; color: var(--kivi-aptmnt-secondary-color); }
+      a:focus { text-decoration: none !important; }
+      a:hover { text-decoration: none; }
+      a, .button, input { outline: medium none !important; color: var(--primary); }
+      h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
+      a h1, a h2, a h3, a h4, a h5, a h6 { color: var(--kivi-aptmnt-title-color); transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
+      i ,.form-control{transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out;}
+      a:hover h1, a:hover h2, a:hover h3, a:hover h4, a:hover h5, a:hover h6 { color: var(--kivi-aptmnt-sub-title-color); }
+  }
+
+  //.kivi-care-appointment-booking-container {
+  //  background-color: var(--kivi-aptmnt-white-light-color) !important;
+  //}
+
+  .kc-telemed-join {
+    color: white;
+  }
+
+  .kivi-btn-primary {
+    line-height: 30px !important;
+    display: inline-block;
+    text-align: center;
+    padding: 0 18px ;
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+    position: relative; 
+    background: var(--primary) !important;
+    border-radius: 0.25em !important; 
+    border-color: transparent !important;   
+    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out; 
+    color: var(--kivi-aptmnt-white-color) !important;
+    letter-spacing: normal !important;
+    box-shadow: none !important;
+  }
+  .kivi-boder-bottom{border-bottom: 2px solid ; border-color: var(--kivi-aptmnt-light-blue-color);}
+  button.kivi-btn-primary:hover ,.kivicare-book ,button.kivi-btn-primary:focus ,.kivi-btn-primary.cancel-btn{background: var(--kivi-aptmnt-secondary-color) !important; color: var(--kivi-aptmnt-white-color); }
+  .kivi-text-primary{color: var(--primary);outline: none !important;}
+  button.kivi-btn-primary:focus{border:none !important; outline: none !important;}
+  .entry-content{ .kvp-wraper{ font-family: 'Roboto', sans-serif; font-size: inherit; } }
+  .kvp-wraper{
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 { 
+      font-family: 'Heebo', sans-serif;
+      color: var(--kivi-aptmnt-title-color);
+      margin: 0;
+      -ms-word-wrap: break-word;
+      word-wrap: break-word;
+      line-height: 1.5em;
+      font-weight:normal;
+      padding: 0 !important;
+      letter-spacing: normal;
+  }
+}
+
+.entry-content{
+  .kvp-wraper{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 { 
+      font-family: 'Heebo', sans-serif!important;
+      letter-spacing: normal !important;
+      margin-top:0;
+    }
+  } 
+  ul{
+    margin:0 !important;
+    padding:0 !important;
+  } 
+}
+
+.kvp-wraper {
+  h1 { font-size: 62px !important; letter-spacing: normal !important;text-transform: capitalize !important; }
+  h2 { font-size: 41px !important; line-height: 1.300em; letter-spacing: normal !important; text-transform: capitalize !important; }
+  h3 { font-size: 28px !important; line-height: 1.290em; letter-spacing: normal !important; text-transform: capitalize !important; }
+  h4 { font-size: 22px !important; line-height: 1.290em; letter-spacing: normal !important;margin-top: 0 !important; text-transform: capitalize !important; }
+  h5 { font-size: 19px !important; line-height: 1.290em; letter-spacing: normal !important; text-transform: capitalize !important; }
+  h6 { font-size: 18px !important; line-height: 1.290em;text-transform: capitalize !important;  letter-spacing: normal !important; text-transform: capitalize !important;}
+}
+
+.kvp-wraper{
+  ul{
+    margin:0 !important;
+    padding:0 !important;
+    li{
+      margin: 0;
+    }
+  }
+  .pagination{
+    display: flex !important;
+    li{
+      span{
+        line-height: normal !important;
+        padding: 0.5em 0.75em !important;
+      }
+    }
+  }
+  .form-control{font-size: 16px;float: none !important;}
+  input[type=checkbox]{display: block;}
+  .btn:focus, .btn.focus{box-shadow: none;text-decoration: none;}
+    input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea{color: var(--kivi-aptmnt-body-text);}
+    input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus{border-color:var(--kivi-aptmnt-primary-color); color: var(--kivi-aptmnt-body-text);}
+
+  ._horizontal-scroll .d-inline-block .card-body .kivi-media .kivi-media-body .kivi-text-primary { display: block ; }
+  .card.book-appointment-widget{  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.09); border: 1px solid rgba(0,0,0,.125); }
+  .badge-outline-kivi{border: 1px solid var(--primary);color: var(--primary); background: var(--kivi-aptmnt-white-color);}
+  .kivi-badge-active{background: var(--primary); color: var(--kivi-aptmnt-white-color);border: 1px solid var(--primary);}
+  .badge-custom-kivi{padding: 8px 14px !important;  font-weight: normal;border-radius: 0.25em !important;}
+  .form-group label{font-weight: normal;  font-size: 1.4em; line-height: 1.29em;}
+  .book-appointment-widget {
+    .kivi-media {
+      .doctor-image {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .card.doctor-selected {
+      border-color: var(--primary);
+      box-shadow: 0 0 2em 0 rgba(136, 152, 170, 0.15) !important;
+    }
+    .kivi-details small {
+      text-transform: uppercase;
+      font-size: 14px;
+      color: var(--primary);
+    }
+  }
+  .book-appointment-widget .widget_session_slots{min-height: 308px;padding-top:18px !important;}
+  .book-appointment-widget  .float-right .btn.kivi-btn-primary{ margin-top: 42px;}
+  #appointmentDataForm #appointmentDate .vc-w-full.vc-relative{min-height: 307px; padding-top: 30px;}
+  #appointment-detail .modal-header .close:focus{outline: none ;}
+  #appointment-detail .modal-header{ padding-top: 0 ; top: 0;}
+  #appointment-detail .modal-header .close { position: absolute;
+    right: 45px;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    top: 43px;
+    color: var(--kivi-aptmnt-white-color);
+    background: var(--primary);}
+  .book-appointment-widget .card.doctor-selected{border-color: var(--primary);}
+  .card-header.kivi-header{background-color: var(--primary);padding: 12px;}
+  .card-header.kivi-header h3 {color: var(--kivi-aptmnt-white-color);}
+  .form-control:focus{border-color:var(--kivi-aptmnt-primary-color);}
+  .form-control:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .kivi-calender .vc-day-content.vc-focusable.vc-font-bold.vc-text-white.vc-font-medium.vc-text-sm.vc-cursor-pointer {background-color: var(--primary);}
+
+  .kivi-doctor-name{display: block;}
+  .kc-doctor-slider .kivi-media-body{margin-left:15px;}
+  .kivi-doctor-list{display: flex;padding-left: 16px;}
+  .VueCarousel-navigation-button{
+    padding:0 !important;
+  }
+  #appointmentDate{
+    border-radius: 00.25em !important;
+  }
+  .form-control{
+    height: 38px !important;
+    padding: 0.375em 0.75em !important;
+    font-size: 16px !important;
+    background-color: #fff;
+    border: 1px solid #ced4da !important;
+    border-radius: 0.25em !important;
+    box-shadow: none !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important; 
+  }
+  textarea.form-control{
+    height: auto !important;
+  }
+  .kc-doctor-slider{
+    .kivi-media {
+      align-items: center;
+    }
+  }
+  
+}
+
+.book-appointment-widget{
+  .multiselect {
+    .multiselect__input{
+      height:auto;
+      line-height: normal;
+      background: transparent;
+      padding:0;
+    }
+  } 
+}
+
+/*---------------------------------------------------------------------
+                  Model
+    -----------------------------------------------------------------------*/
+
+.kvp-modal{
+  h1, h2, h3,h4{
+      margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 { 
+    font-family: 'Heebo', sans-serif!important;
+    letter-spacing:normal;
+    margin-top:0;
+  }
+  h1 { font-size: 3.900em;font-weight: 500; }
+  h2 { font-size: 2.541em; line-height: 1.300em;font-weight: 500; }
+  h3 { font-size: 1.750em !important; line-height: 1.290em;font-weight: 500; }
+  h4 { font-size: 1.400em; line-height: 1.290em;font-weight: 500; }
+  h5 { font-size: 1.200em; line-height: 1.290em; font-weight: 500;}
+  h6 { font-size: 18px; line-height: 1.290em;text-transform: capitalize;font-weight: 500; } 
+  img{
+    display: inline-block;
+  }
+  hr {
+    margin: 1em auto;  
+  }
+  .btn:focus, .btn.focus{box-shadow: none;text-decoration: none;}
+  a { text-decoration: none; }
+  ul.nav.nav-pills{
+    margin:0;
+      li{
+      line-height: 28px;
+      margin:0;
+    }
+  } 
+  .card-header{
+    padding:15px;
+  }
+  .modal-header{
+    padding: 22px;
+    position: relative;
+    top:0;
+    .close{
+      font-size: 22px !important;
+      position: absolute;
+      right: 15px;
+      padding: 0;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--kivi-aptmnt-white-color);
+      background: var(--primary);
+      margin:0;
+      opacity: 1;
+      &:hover{
+        color: var(--kivi-aptmnt-white-color);
+        opacity: 1;
+      }
+       &:focus{
+        border:none;
+        text-decoration: none;
+        outline: none;
+       }
+    }
+    h5{
+      margin:0;
+    }
+  }    
+  .form-control{
+    height: 38px !important;
+    padding: 0.375em 0.75em !important;
+    font-size: 16px !important;
+    background-color: #fff;
+    border: 1px solid #ced4da !important;
+    border-radius: 0.25em !important;
+    box-shadow: none !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important; 
+  }
+  label{
+    margin-bottom: 0.5em !important;
+  }
+  .iq-font-weight{font-weight: normal;}
+  .modal-title{text-align: center;
+    color: var(--kivi-aptmnt-primary-color);
+    text-transform: capitalize;
+    margin: 0 auto;}
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link{background-color: var(--kivi-aptmnt-primary-color);}
+  #kiviCarePatientLogin .form-group label ,#kiviCarePatientRegister .form-group label{font-size: 14px;}
+  #auth-modal___BV_modal_header_{
+    padding:38px !important;
+  }
+  .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1em);
+  }
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5em;
+    pointer-events: none;
+  }
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    outline: 0;
+    box-shadow: none !important;
+}
+ 
+}
+.modal.kvp-modal.show{
+    opacity: 1 !important;
+    z-index: 9999 !important;
+    .modal-dialog.kv-dialog {
+      transform: none !important;
+   }
+}
+.modal.kvp-modal.fade{
+  .modal-dialog.kv-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+  }
+} 
+.kivi-media-body {
+  .fa-video {
+    color: var(--kivi-aptmnt-primary-color);
+    padding: 6px;
+  }
+}
+
+.appointment-widget-service-list {
+  border: 1px solid #ced4da !important;
+  min-height: 204px;
+  text-align: center !important;
+  padding: 10px;
+  border-radius: 0.25em !important;
+  font-size: 80%;
+}
+
+.appointment-widget-description {
+  line-height: 0 !important;
+}
+hr {
+  border-bottom: var(--separator--height) solid #d9dbdd;
+}
+.cal-badge .badge-outline-primary {
+  border: 1px solid var(--primary) !important;
+}
+.cal-badge a {
+  color : var(--primary) !important;
+} 
+
+.cal-badge .badge {
+  padding: 0.5em 0.8em !important;
+}
+
+.cal-badge  .font-weight-bold {
+  font-weight: 300 !important;
+}
+/*---------------------------------------------------------------------
+              Scrollbar
+-----------------------------------------------------------------------*/
+.scrollbar-track-y { width: 5px !important; }
+.scrollbar-thumb { width: 4px !important; }
+::-webkit-scrollbar { width: 5px; }
+
+/* Track */
+::-webkit-scrollbar-track { background: var(--kivi-aptmnt-white-color); }
+
+/* Handle */
+::-webkit-scrollbar-thumb { background: var(--primary); }
+.body-scroll-hidden{ overflow:hidden;overflow-y: auto; }
+
+@media (min-width: 992px){
+  .kvp-modal{
+    .modal-lg, .modal-xl {
+      max-width: 800px;
+    }
+  }
+}
+
+
+@media (min-width: 700px){
+    .entry-content{
+      .kvp-wraper{
+        .kivi-media-body{
+          h4,h5,h6{
+            margin: 0 0 0.25em !important;
+          }
+        } 
+        p, li {
+          line-height: 28px;
+        } 
+        font-size: 16px !important;   
+        h3 { font-size: 1.750em !important; line-height: 1.290em; }  
+      } 
+      .kvp-wraper{
+        li {
+          line-height: 28px;
+        } 
+      }     
+   }
+}
+
+@media (min-width: 576px){
+  .kvp-modal{
+    .modal-dialog-centered {
+      min-height: calc(100% - 3.5em);
+    }
+    .modal-dialog {
+      margin: 1.75em auto;
+    }
+  }
+}
+
+
+@media(max-width:480px) {
+  .kvp-wraper {
+    .kivi-doctor-list {display: block ;}
+    .kivi-doctor-list .header-search{margin-top: 15px;}
+    .kc-doctor-slider {
+        .VueCarousel-slide{width: 100%;}
+        .kivi-media{ display: block;}
+        .card-body{ text-align: center;}
+        .kivi-media-body{ margin: 0;}
+        .kivi-doctor-name{ margin-top: 15px ;}
+        .kivi-details{ width: auto ;}
+        margin-top: 10px;
+    }
+    img {
+      display: inline;
+    }
+  } 
+
+}
+
+.VueCarousel-navigation button:not(:hover):not(:active):not(.has-background){
+  background-color: transparent;
+}
+

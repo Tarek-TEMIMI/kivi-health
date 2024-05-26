@@ -1,0 +1,537 @@
+
+.kivi-patient-dashboard-widget::selection { background: var(--kivi-pst-dash-primary-color); color: var(--kivi-pst-dash-white-color); text-shadow: none; }
+.kivi-encounter-card .kivi-widget-text-primary {color: var(--kivi-pst-dash-primary-color);outline: none !important;}
+.kivi-appointment-booking  {
+  .kivi-calender{width:100%;}
+  .badge-custom-kivi{padding: 8px 14px !important;  font-weight: normal;border-radius: 0.25em !important;}
+  .widget_session_slots{min-height: 308px;padding-top:18px !important;}
+  .badge-custom-kivi{padding: 8px 14px !important;  font-weight: normal;border-radius: 0.25em !important;}
+  .badge-outline-kivi{border: 1px solid var(--primary);color: var(--primary); background: var(--kivi-pst-dash-white-color);}
+  .kivi-badge-active{background: var(--primary); color: var(--kivi-pst-dash-white-color);border: 1px solid var(--primary);}
+  .dashboard_widget_session_slots { height: 308px; overflow: scroll; }
+  .fa-video {
+    color: var(--kivi-pst-dash-primary-color);
+  }
+  .multiselect__element:hover{
+    .fa-video {
+      color: white;
+    }
+  }
+}
+.kc-mt-30{ margin-top: 30px; }
+.kc-mb-15{ margin-bottom: 20px;}
+
+.kc-patient-dashboard-empty-slot {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    p {
+      b {
+        color: var(--primary) !important;
+      }
+    }
+    .spinner-border{
+      color: var(--primary) !important;
+    }
+}
+
+.kc-patient-dashboard{
+  h1,h2,h3,h4,h5,h6{
+    margin-top: 0 !important;
+    margin-bottom: 0!important;
+  }
+  a{
+      color:var(--kivi-pst-dash-body-text) ;
+    i{
+        color:var(--kivi-pst-dash-body-text) ;
+    }
+    &:hover{
+      color: var(--kivi-pst-dash-primary-color) ;
+      text-decoration: none !important;
+    }
+    &:visited{
+        color:var(--kivi-pst-dash-body-text) !important;
+      text-decoration: none !important;
+    }
+    &:focus{
+      text-decoration: none !important;
+    }
+  }
+  a.router-link-active{
+    color: var(--primary) !important;
+  }
+  p{
+      color: var(--kivi-pst-dash-body-text) !important;
+    font-size: 16px !important;
+    b{
+        color: var(--kivi-pst-dash-body-text);
+    }
+  }
+
+  .kivi-card{
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.09);
+    .kivi-card-header{
+      background-color: var(--kivi-pst-dash-white-color);
+      padding:1.25em;
+      border-bottom-color: var(--kivi-pst-dash-white-light-color);
+      h4{
+        color: var(--primary);
+      }
+    }
+  }
+  .dr-name{
+    color:var(--primary);
+  }
+  .p-appo-list{
+    border: 1px solid var(--kivi-pst-dash-white-light-color);
+    padding:15px;
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .kc-list-scroll{
+    height: 450px;
+    overflow-y: auto;
+    // display: flex;
+    // align-items: center;
+    .p-appo-list {
+      display: flex;
+      .kivi-btn-primary {
+        padding: 3px 18px !important;
+      }
+      .kivi-header {
+        width: 100%;
+      }
+    }
+  }
+  .kc-telemed-join{
+    width: 100%;
+    a {
+      i {
+        color: white;
+      }
+    }
+  }
+  .kc-appointment-list-scroll {
+      height: 358px;
+      min-height: 429px;
+      max-height: 429px;
+      overflow-y: auto;
+  }
+  .kc-p-icon{
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    background: var(--primary);
+    line-height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    i{
+      font-size: 20px;
+      color:var(--kivi-pst-dash-white-color);
+    }
+  }
+  .kivi-slot-msg {
+    color:var(--kivi-pst-dash-primary-color);
+  }
+  .p-ttl-count{
+    font-size: 35px !important;
+    line-height: normal !important;
+    font-weight: 700;
+  }
+  .form-group{
+    label{
+      font-size: 16px !important;
+      color: var(--kivi-pst-dash-title-color) !important;
+      margin-bottom: .5em !important;
+      margin-top: 0 !important;
+    }
+  }
+  .kc-info-title{
+    color:var(--primary);
+  }
+  .kc-user-email{
+    white-space: nowrap; 
+    width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+
+}
+
+// appointment list
+.kivi-patient-dashboard-ecounters {
+  .appointment-pagination {
+    .page-item.active .page-link {
+      z-index: 3;
+      color: #fff;
+      background-color: var(--primary) !important;
+      border-color: var(--primary) !important;
+    }
+  }
+}
+
+.kivi-patient-dashboard-widget{
+  .kc-patient-dashboard-auth{
+    a,a:visited {
+      color: var(--kivi-pst-dash-body-text);
+    }
+    a{
+      &:hover{
+        color: var(--kivi-pst-dash-primary-color);
+      }
+    }
+    .form-control{
+      height:38px !important;
+      padding: 0.375em 0.75em !important;
+      font-size: 16px !important;
+      background-color: #fff;
+      border: 1px solid #ced4da !important;
+      border-radius: 0.25em !important;
+      box-shadow: none !important;
+      font-weight: 400 !important;
+      line-height: 1.5 !important;
+    }
+    .nav-pills{
+      .nav-link.active{
+        color:var(--kivi-pst-dash-white-color) !important;
+        background-color:var(--kivi-pst-dash-primary-color) !important;
+      }
+    } 
+  } 
+}
+.kivi-patient-dashboard-widget .kc-patient-dashboard .kivi-card{border-radius: 0px;}
+.kivi-patient-dashboard-widget .kc-patient-dashboard .kivi-patient-right-dashboard{min-height: 628px;}
+.kivi-patient-dashboard-widget .kc-patient-dashboard .kivi-patient-right-25{min-height: 682px;}
+.kc-patient-dashboard-auth .card-header{padding: 0;border-bottom: none;background: white;margin: 0 30px;}
+.kivi-patient-dashboard-widget .kc-patient-dashboard-auth .nav-pills .nav-link.active{background-color: var(--kivi-pst-dash-primary-color) !important;padding: 15px;border-radius: 0;}
+.kivi-patient-dashboard-widget .kc-patient-dashboard-auth.auth-board .nav-pills .nav-item a.nav-link.active{color: var(--kivi-pst-dash-white-color) !important;background-color: var(--primary) !important;}
+.kivi-patient-dashboard-widget .kc-patient-dashboard-auth a, .kivi-patient-dashboard-widget .kc-patient-dashboard-auth a:visited {color: var(--kivi-pst-dash-body-text);padding: 15px;border-radius: 0;background: #f7f7f7;}
+#kiviCarePatientLogin .kivi-btn-primary, #kiviCarePatientRegister .kivi-btn-primary{background-color: var(--primary) !important;padding: 10px;}
+.kivi-patient-dashboard-widget .kc-patient-dashboard-auth .form-control {
+  height: 38px !important;
+  padding: 1.375em -0.25em !important;
+  font-size: 16px !important;
+  background-color: #fff;
+  border: 1px solid #f5f5f5 !important;
+  border-radius: 0em !important;
+  box-shadow: none !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+#appointment-detail { .apt-book-text { color: #75a677; } }
+@media(min-width:992px) and (max-width:1024px){
+  .kc-patient-dashboard{
+    .kc-list-scroll{
+      height: 450px;
+    }
+  }  
+}
+@media(min-width:768px) and (max-width:991px){
+  .kivi-patient-dashboard-widget .kc-patient-dashboard .kivi-patient-right-dashboard{min-height: 465px;}
+  .kivi-patient-dashboard-widget .kc-patient-dashboard .kivi-patient-right-25{min-height: 635px;}
+  .p-ttl-name{font-size: 18px;}
+}
+@media(max-width:767px){
+  .kc-appo-title{
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+    text-align: center;
+    h4{
+      margin-bottom:15px !important;
+    }
+  }
+  .kivi-patient-dashboard-widget .kc-patient-dashboard .kivi-patient-right-dashboard{min-height: 1px;}
+  .kivi-patient-dashboard-widget .kc-patient-dashboard .kivi-patient-right-25{min-height: 1px;}
+  
+  .card-profile-image.img-size img{
+    position: static;
+  }
+
+ }
+
+.kivi-pr {
+  position: relative;
+}
+
+.select_clear_btn {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+  height: 36px;
+  cursor: pointer;
+  margin: auto;
+  font-size: 19px;
+  font-weight: 700;
+  color: #cdd5dd;
+  padding: 5px;
+}
+
+#appointment-detail-dashboard .modal-header .close:focus{outline: none ;}
+#appointment-detail-dashboard .modal-header{ padding-top: 0 ; top: 0;}
+#appointment-detail-dashboard .modal-header .close {
+  position: absolute;
+  right: 20px;
+  padding: 0;
+  width: 45px;
+  height: 45px;
+  top: 32px;
+  color: var(--kivi-aptmnt-white-color);
+  background: var(--primary);
+}
+
+.kvp-modal{
+  h1, h2, h3,h4{
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Heebo', sans-serif!important;
+    letter-spacing:normal;
+    margin-top:0;
+  }
+  h1 { font-size: 3.900em;font-weight: 500; }
+  h2 { font-size: 2.541em; line-height: 1.300em;font-weight: 500; }
+  h3 { font-size: 1.750em !important; line-height: 1.290em;font-weight: 500; }
+  h4 { font-size: 1.400em; line-height: 1.290em;font-weight: 500; }
+  h5 { font-size: 1.200em; line-height: 1.290em; font-weight: 500;}
+  h6 { font-size: 18px; line-height: 1.290em;text-transform: capitalize;font-weight: 500; }
+  img{
+    display: inline-block;
+  }
+  hr {
+    margin: 1em auto;
+  }
+  .btn:focus, .btn.focus{box-shadow: none;text-decoration: none;}
+  a { text-decoration: none; }
+  ul.nav.nav-pills{
+    margin:0;
+    li{
+      line-height: 28px;
+      margin:0;
+    }
+  }
+  .card-header{
+    padding:15px;
+  }
+  .modal-header{
+    padding: 22px;
+    position: relative;
+    top:0;
+    .close{
+      font-size: 22px !important;
+      position: absolute;
+      right: 15px;
+      padding: 0;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--kivi-aptmnt-white-color);
+      background: var(--primary);
+      margin:0;
+      opacity: 1;
+      &:hover{
+        color: var(--kivi-aptmnt-white-color);
+        opacity: 1;
+      }
+      &:focus{
+        border:none;
+        text-decoration: none;
+        outline: none;
+      }
+    }
+    h5{
+      margin:0;
+    }
+  }
+  .form-control{
+    height: 38px !important;
+    padding: 0.375em 0.75em !important;
+    font-size: 16px !important;
+    background-color: #fff;
+    border: 1px solid #ced4da !important;
+    border-radius: 0.25em !important;
+    box-shadow: none !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+  }
+  label{
+    margin-bottom: 0.5em !important;
+  }
+  .iq-font-weight{font-weight: normal;}
+  .modal-title{text-align: center;
+    color: var(--primary);
+    text-transform: capitalize;
+    margin: 0 auto;}
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link{background-color: var(--kivi-aptmnt-primary-color);}
+  #kiviCarePatientLogin .form-group label ,#kiviCarePatientRegister .form-group label{font-size: 14px;}
+  #auth-modal___BV_modal_header_{
+    padding:38px !important;
+  }
+  .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1em);
+  }
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5em;
+    pointer-events: none;
+  }
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    outline: 0;
+    box-shadow: none !important;
+  }
+
+}
+
+.modal-header{
+  padding: 22px;
+  position: relative;
+  top:0;
+  .close{
+    font-size: 22px !important;
+    position: absolute;
+    right: 15px;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--kivi-aptmnt-white-color);
+    background: var(--primary);
+    margin:0;
+    opacity: 1;
+    &:hover{
+      color: var(--kivi-aptmnt-white-color);
+      opacity: 1;
+    }
+    &:focus{
+      border:none;
+      text-decoration: none;
+      outline: none;
+    }
+  }
+  h5{
+    margin:0;
+  }
+}
+
+.modal.kvp-modal.show{
+  opacity: 1 !important;
+  z-index: 9999 !important;
+  .modal-dialog.kv-dialog {
+    transform: none !important;
+  }
+}
+
+.modal-title{text-align: center;
+  color: var(--primary);
+  text-transform: capitalize;
+  margin: 0 auto;}
+
+.modal.kvp-modal.fade{
+  .modal-dialog.kv-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+  }
+}
+
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1em);
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0.5em;
+  pointer-events: none;
+}
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3em;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.modal.kvp-modal.show{
+  opacity: 1 !important;
+  z-index: 9999 !important;
+  .modal-dialog.kv-dialog {
+    transform: none !important;
+  }
+}
+.modal.kvp-modal.fade{
+  .modal-dialog.kv-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+  }
+}
+.cal-badge .badge-outline-primary {
+  border: 1px solid var(--primary) !important;
+}
+.cal-badge a {
+  color :var(--primary) !important;
+} 
+.cal-badge .badge {
+  padding: 0.5em 0.8em !important;
+}
+.cal-badge  .font-weight-bold {
+  font-weight: 300 !important;
+}
+.cal-badge a i {
+  color: var(--primary) !important;
+}
+@media (min-width: 992px){
+  .kvp-modal{
+    .modal-lg, .modal-xl {
+      max-width: 800px;
+    }
+  }
+}
+
+@media (min-width: 576px){
+  .kvp-modal{
+    .modal-dialog-centered {
+      min-height: calc(100% - 3.5em);
+    }
+    .modal-dialog {
+      margin: 1.75em auto;
+    }
+  }
+}
+
+.kivi-card-body{
+    a:hover{
+      color: var(--kivi-aptmnt-secondary-color);
+    }
+}
